@@ -1,0 +1,12 @@
+@use  '../colors.scss';
+
+html, body {
+    background: colors.$surface;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, p {
+    font-family: 'roboto';
+    color: colors.$primary;
+}

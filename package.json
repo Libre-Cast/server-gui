@@ -1,0 +1,15 @@
+{
+  "scripts": {
+    "tauri": "tauri"
+  },
+  "dependencies": {
+    "tauri": "^0.14.1"
+  },
+  "name": "tauri-test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
