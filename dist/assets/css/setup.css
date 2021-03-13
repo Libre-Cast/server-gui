@@ -63,7 +63,7 @@ body {
   background: #FAFAFA;
   color: #4D4D4D;
   height: 100vh;
-  margin-top: -100vh;
+  margin-top: 0;
 }
 
 section {
