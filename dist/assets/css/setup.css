@@ -1,0 +1,139 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("../../assets/fonts/Roboto/Roboto-Light.ttf");
+}
+@font-face {
+  font-family: "Roboto Regular";
+  src: url("../../assets/fonts/Roboto/Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("../../assets/fonts/Manrope/static/Manrope-Bold.ttf");
+}
+@font-face {
+  font-family: "Manrope Light";
+  src: url("../../assets/fonts/Manrope/static/Manrope-ExtraLight.ttf");
+}
+input, button, .btn {
+  font-size: 2.4rem;
+  outline: 0 none transparent;
+  border: 0 none transparent;
+  border-radius: 0.2em;
+  padding: 0.2em 0.5em;
+  box-shadow: 0 4px 16px rgba(79, 156, 239, 0.4);
+  transition: border-radius 0.2s, box-shadow 0.3s;
+}
+input:hover, button:hover, .btn:hover {
+  border-radius: 0.4em;
+  box-shadow: 0 4px 16px rgba(79, 156, 239, 0.55);
+}
+input:focus, input:active, button:focus, button:active, .btn:focus, .btn:active {
+  border-radius: 0.5em;
+  box-shadow: 0 4px 16px rgba(79, 156, 239, 0.55);
+}
+
+input[type=text] {
+  background: #FAFAFA;
+}
+
+button, .btn {
+  font-family: "Manrope";
+  text-transform: uppercase;
+  text-decoration: none transparent;
+  color: #FAFAFA;
+  background: #4F9CEF;
+  cursor: pointer;
+  min-width: 25rem;
+  margin-right: 2em;
+}
+
+.btn--secondary {
+  color: #4F9CEF;
+  background: #FAFAFA;
+}
+
+*, :root, html, body {
+  margin: 0;
+  padding: 0;
+  font-size: 5pt;
+  box-sizing: border-box;
+}
+
+body {
+  background: #FAFAFA;
+  color: #4D4D4D;
+  height: 100vh;
+  margin-top: -100vh;
+}
+
+section {
+  height: 100vh;
+  display: grid;
+  grid-template-areas: "graphic content";
+  grid-template-columns: 40vw 1fr;
+}
+
+.graphic {
+  grid-area: graphic;
+  place-self: center;
+}
+
+.content {
+  grid-area: content;
+  place-self: center start;
+}
+
+#start {
+  grid-template-areas: "graphic" "content";
+  grid-template-rows: 80vh 1fr;
+  grid-template-columns: 100vw;
+  place-items: center;
+}
+
+.logo {
+  width: 75%;
+}
+
+h1, h2, p {
+  margin-bottom: 0.5em;
+}
+
+h1 {
+  font-size: 9.6rem;
+  font-family: "Manrope";
+  color: #4F9CEF;
+}
+
+h2 {
+  font-size: 6rem;
+  font-family: "Roboto";
+  font-weight: normal;
+}
+
+p {
+  font-size: 3rem;
+}
+
+.link {
+  font-size: 2rem;
+  color: #4F9CEF;
+  margin-top: 5em;
+  display: inline-block;
+}
+
+input {
+  font-size: 4.8rem;
+  display: block;
+}
+
+button, .btn {
+  display: inline-block;
+  font-size: 3.6rem;
+  margin-top: 0.5em;
+}
+
+input[type=text] {
+  margin-bottom: 1.5em;
+}
+
+/*# sourceMappingURL=setup.css.map */

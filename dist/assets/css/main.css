@@ -1,35 +1,17 @@
-@font-face {
-  font-family: "Roboto";
-  src: url("../../assets/fonts/Roboto/Roboto-Light.ttf");
-}
-@font-face {
-  font-family: "Roboto Regular";
-  src: url("../../assets/fonts/Roboto/Roboto-Regular.ttf");
-}
-@font-face {
-  font-family: "Manrope";
-  src: url("../../assets/fonts/Manrope/static/Manrope-Bold.ttf");
-}
-@font-face {
-  font-family: "Manrope Light";
-  src: url("../../assets/fonts/Manrope/static/Manrope-ExtraLight.ttf");
-}
-* {
-  font-family: "Manrope Light";
-}
+/* Error: Can't find stylesheet to import.
+ *   ,
+ * 1 | @use 'colors.scss';
+ *   | ^^^^^^^^^^^^^^^^^^
+ *   '
+ *   dist/src/scss/main.scss 1:1  root stylesheet */
 
-html, body {
-  background: #FAFAFA;
-  margin: 0;
-  padding: 0;
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Can't find stylesheet to import.\a   \2577 \a 1 \2502  @use 'colors.scss';\a   \2502  ^^^^^^^^^^^^^^^^^^\a   \2575 \a   dist/src/scss/main.scss 1:1  root stylesheet";
 }
-
-h1, h2 {
-  font-family: "roboto";
-}
-
-section {
-  height: 100vh;
-}
-
-/*# sourceMappingURL=main.css.map */

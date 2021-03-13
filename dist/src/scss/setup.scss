@@ -1,0 +1,89 @@
+@use  'abstracts/colors.scss';
+@use  'abstracts/fonts.scss';
+@use 'input.scss';
+
+
+*, :root, html, body {
+    margin: 0;
+    padding: 0;
+    font-size: 5pt;
+    box-sizing: border-box;
+}
+
+body {
+    background: colors.$surface;
+    color: colors.$text;
+    height: 100vh;
+    // overflow-y: hidden;
+    margin-top: -100vh;
+}
+
+section {
+    height: 100vh;
+    display: grid;
+    grid-template-areas: 'graphic content';
+    grid-template-columns: 40vw 1fr;
+}
+
+.graphic {
+    grid-area: graphic;
+    place-self: center;
+}
+
+.content {
+    grid-area: content;
+    place-self: center start;
+}
+
+#start {
+    grid-template-areas: 'graphic' 'content';
+    grid-template-rows: 80vh 1fr;
+    grid-template-columns: 100vw;
+    place-items: center;
+}
+
+.logo {
+    width: 75%;
+}
+
+h1, h2, p {
+    margin-bottom: .5em;
+}
+
+h1 {
+    font-size: 9.6rem;
+    font-family: 'Manrope';
+    color: colors.$primary;
+}
+
+h2 {
+    font-size: 6rem;
+    font-family: 'Roboto';
+    font-weight: normal;
+}
+
+p {
+    font-size: 3rem;
+}
+
+.link {
+    font-size: 2rem;
+    color: colors.$primary;
+    margin-top: 5em;
+    display: inline-block;
+}
+
+input {
+    font-size: 4.8rem;
+    display: block;
+}
+
+button, .btn {
+    display: inline-block;
+    font-size: 3.6rem;
+    margin-top: .5em;
+}
+
+input[type="text"] {
+    margin-bottom: 1.5em;
+}

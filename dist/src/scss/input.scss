@@ -1,0 +1,48 @@
+@use 'abstracts/colors.scss';
+@use 'abstracts/fonts.scss';
+
+input, button, .btn {
+    font-size: 2.4rem;
+
+    outline: 0 none transparent;
+    border: 0 none transparent;
+    border-radius: .2em;
+
+    padding: .2em .5em;
+    box-shadow: 0 4px 16px rgba(colors.$primary, 0.4);
+
+    transition: border-radius .2s, box-shadow .3s;
+
+    &:hover {
+        border-radius: .4em;
+        box-shadow: 0 4px 16px rgba(colors.$primary, 0.55);
+    }
+
+    &:focus, &:active {
+        border-radius: .5em;
+        box-shadow: 0 4px 16px rgba(colors.$primary, 0.55);
+    }
+}
+
+input[type="text"] {
+    background: colors.$surface;
+}
+
+button, .btn {
+    font-family: 'Manrope';
+    text-transform: uppercase;
+    text-decoration: none transparent;
+
+    color: colors.$surface;
+    background: colors.$primary;
+
+    cursor: pointer;
+
+    min-width: 25rem;
+    margin-right: 2em;
+}
+
+.btn--secondary {
+    color: colors.$primary;
+    background: colors.$surface;
+}
