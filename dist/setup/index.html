@@ -4,9 +4,106 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../assets/css/setup/setup.css">
     <title>Server Setup!</title>
 </head>
 <body>
-    
+    <section id="start">
+        <img src="../assets/svgs/logo.svg" class="logo">
+        <div class="content">
+            <p>
+                (Click anywhere to continue.)
+            </p>
+        </div>
+    </section>
+    <section id="welcome">
+        <div class="graphic">
+            <p>
+                NONE!
+            </p>
+        </div>
+        <div class="content">
+            <h1>
+                Welcome!
+            </h1>
+
+            <h2>
+                Select a name for this server:
+            </h2>
+
+            <input type="text" name="server-name" id="server-name" placeholder="My Server Name">
+
+            <button class="btn btn--primary">Continue</button>
+        </div>
+    </section>
+    <section id="connect">
+        <div class="graphic">
+            <div class="qr-code">
+                <p>
+                    (QR-Code)
+                </p>
+            </div>
+        </div>
+        <div class="content">
+            <h1>
+                Connect a Device
+            </h1>
+
+            <h2>
+                Open the LibreCast app or client.
+            </h2>
+
+            <p>
+                Click on "Add Server" and scan the code.
+            </p>
+
+            <a href="#">Advanced connect</a>
+        </div>
+    </section>
+    <section id="device-connected">
+        <div class="graphic">
+            <p>
+                Connection Made!
+            </p>
+        </div>
+        <div class="content">
+            <h1>
+                Device Connected!
+            </h1>
+
+            <h2>
+                <span id="device-name-model"></span> has connected.
+            </h2>
+
+            <p>
+                Do you want to accept this connection?
+            </p>
+
+            <button class="btn btn--primary">Accept</button>
+            <button class="btn btn--secondary">Decline</button>
+        </div>
+    </section>
+    <section id="device-added">
+        <div class="graphic">
+            <p>
+                Device added!
+            </p>
+        </div>
+        <div class="content">
+            <h1>
+                Device Added!
+            </h1>
+
+            <h2>
+                <span id="device-name-model"></span> has been added.
+            </h2>
+
+            <p>
+                You can now cast from that device.
+            </p>
+
+            <a href="../dashboard/index.html" class="btn btn--primary">Continue</a>
+        </div>
+    </section>
 </body>
 </html>

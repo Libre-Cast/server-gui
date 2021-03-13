@@ -1,4 +1,6 @@
 @use  '../colors.scss';
+@import  '../typography.scss';
+
 
 html, body {
     background: colors.$surface;
@@ -6,7 +8,10 @@ html, body {
     padding: 0;
 }
 
-h1, h2, p {
+h1, h2 {
     font-family: 'roboto';
-    color: colors.$primary;
+}
+
+section {
+    height: 100vh;
 }

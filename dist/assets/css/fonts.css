@@ -14,22 +14,5 @@
   font-family: "Manrope Light";
   src: url("../../assets/fonts/Manrope/static/Manrope-ExtraLight.ttf");
 }
-* {
-  font-family: "Manrope Light";
-}
 
-html, body {
-  background: #FAFAFA;
-  margin: 0;
-  padding: 0;
-}
-
-h1, h2 {
-  font-family: "roboto";
-}
-
-section {
-  height: 100vh;
-}
-
-/*# sourceMappingURL=setup.css.map */
+/*# sourceMappingURL=fonts.css.map */

@@ -1,12 +1,35 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("../../assets/fonts/Roboto/Roboto-Light.ttf");
+}
+@font-face {
+  font-family: "Roboto Regular";
+  src: url("../../assets/fonts/Roboto/Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("../../assets/fonts/Manrope/static/Manrope-Bold.ttf");
+}
+@font-face {
+  font-family: "Manrope Light";
+  src: url("../../assets/fonts/Manrope/static/Manrope-ExtraLight.ttf");
+}
+* {
+  font-family: "Manrope Light";
+}
+
 html, body {
   background: #FAFAFA;
   margin: 0;
   padding: 0;
 }
 
-h1, h2, p {
+h1, h2 {
   font-family: "roboto";
-  color: #4F9CEF;
+}
+
+section {
+  height: 100vh;
 }
 
 /*# sourceMappingURL=main.css.map */
