@@ -38,6 +38,8 @@ button, .btn {
 
     cursor: pointer;
 
+    display: inline-grid;
+    place-items: center;
     min-width: 25rem;
     margin-right: 2em;
 }

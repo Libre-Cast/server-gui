@@ -1,0 +1,18 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("../../assets/fonts/Roboto/Roboto-Light.ttf");
+}
+@font-face {
+  font-family: "Roboto Regular";
+  src: url("../../assets/fonts/Roboto/Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("../../assets/fonts/Manrope/static/Manrope-Bold.ttf");
+}
+@font-face {
+  font-family: "Manrope Light";
+  src: url("../../assets/fonts/Manrope/static/Manrope-ExtraLight.ttf");
+}
+
+/*# sourceMappingURL=dashboard.css.map */

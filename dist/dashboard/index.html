@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+</head>
+<body>
+    <nav>
+        <img src="../assets/svgs/logo.svg" alt="" class="logo">
+        <div class="version">
+            <p id="server-version">
+                0.0.1-a1 (Plc.Hldr.)
+            </p>
+            <p id="gui-version">
+                0.0.1-o1 (Plc.Hldr.)
+            </p>
+        </div>
+    </nav>
+
+    <header>
+        <span id="server-name">LibreCast Dev (Plc.Hldr.)</span>
+    </header>
+
+    <main>
+        <section class="devices">
+            <h1>
+                Devices
+            </h1>
+
+            <div class="device-list">
+                <div class="device">
+                    <div class="device-icon"></div>
+
+                    <p class="device-name">
+                        John Doe's iPhone
+                    </p>
+
+                    <p class="device-ip">
+                        192.168.1.100
+                    </p>
+                </div>
+            </div>
+
+            <a href="./devices.html" class="btn btn--secondary">Manage Device</a>
+        </section>
+
+        <secion id="settings">
+            <h1>
+                Settings
+            </h1>
+
+            <div class="settings-list">
+                <div class="setting">
+                    <h2 class="setting-name">
+                        Dark Theme
+                    </h2>
+
+                    <p class="setting-description">
+                        This will give the server UI a darker background.
+                    </p>
+
+                    <input type="checkbox" name="dark-theme" id="dark-theme" class="switch">
+                </div>
+
+                <div class="setting">
+                    <h2 class="setting-name">
+                        Allow Connections
+                    </h2>
+
+                    <p class="setting-description">
+                        Turning this off means that devices can't cast to this server.
+                    </p>
+
+                    <input type="checkbox" name="dark-theme" id="dark-theme" class="switch">
+                </div>
+
+                <div class="setting">
+                    <h2 class="setting-name">
+                        Notifications
+                    </h2>
+
+                    <p class="setting-description">
+                        Sends notifications on the server about device connections, casting, and so on.
+                    </p>
+
+                    <input type="checkbox" name="dark-theme" id="dark-theme" class="switch">
+                </div>
+            </div>
+
+            <a href="./settings.html" class="btn btn--secondary">All Settings</a>
+        </secion>
+
+        <section id="media">
+            <h1>
+                Media
+            </h1>
+            <div class="media-controls">
+                <button class="btn btn--round" id="pause-button">Pause</button>
+                <button class="btn btn--round-small" id="prev-button">Prev</button>
+                <button class="btn btn--round-small" id="stop-button">Stop</button>
+                <button class="btn btn--round-small" id="next-button">Next</button>
+            </div>
+            <h2>
+                Currently Casting
+            </h2>
+            <p id="currently-casted-media">
+                Song - Artist (Plc.Hldr.)
+            </p>
+        </section>
+
+        <secion id="connect">
+            <div class="connect-qr-code">
+                <p>
+                    QR-Code. (Plc.Hldr.)
+                </p>
+            </div>
+
+            <h1>
+                Connect
+            </h1>
+
+            <p>
+                <span id="server-ip">192.168.1.167</span>
+            </p>
+        </secion>
+    </main>
+</body>
+</html>

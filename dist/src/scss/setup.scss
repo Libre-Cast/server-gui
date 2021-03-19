@@ -14,7 +14,7 @@ body {
     background: colors.$surface;
     color: colors.$text;
     height: 100vh;
-    // overflow-y: hidden;
+    overflow-y: hidden;
     margin-top: 0;
 }
 
@@ -37,7 +37,7 @@ section {
 
 #start {
     grid-template-areas: 'graphic' 'content';
-    grid-template-rows: 80vh 1fr;
+    grid-template-rows: 90vh 1fr;
     grid-template-columns: 100vw;
     place-items: center;
 }
@@ -68,6 +68,7 @@ h2 {
 
 p {
     font-size: 3rem;
+    font-family: 'Roboto';
 }
 
 .link {
@@ -83,9 +84,9 @@ input {
 }
 
 button, .btn {
-    display: inline-block;
     font-size: 3.6rem;
     margin-top: .5em;
+    text-decoration: none;
 }
 
 input[type="text"] {

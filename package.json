@@ -1,0 +1,10 @@
+{
+  "name": "LibreCast Server GUI",
+  "version": "0.0.1",
+  "scripts": {
+    "build": "tauri build"
+  }
+  "dependencies": {
+    "tauri": "^0.14.1"
+  }
+}

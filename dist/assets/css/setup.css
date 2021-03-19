@@ -43,6 +43,8 @@ button, .btn {
   color: #FAFAFA;
   background: #4F9CEF;
   cursor: pointer;
+  display: inline-grid;
+  place-items: center;
   min-width: 25rem;
   margin-right: 2em;
 }
@@ -63,6 +65,7 @@ body {
   background: #FAFAFA;
   color: #4D4D4D;
   height: 100vh;
+  overflow-y: hidden;
   margin-top: 0;
 }
 
@@ -85,7 +88,7 @@ section {
 
 #start {
   grid-template-areas: "graphic" "content";
-  grid-template-rows: 80vh 1fr;
+  grid-template-rows: 90vh 1fr;
   grid-template-columns: 100vw;
   place-items: center;
 }
@@ -116,6 +119,7 @@ h2 {
 
 p {
   font-size: 3rem;
+  font-family: "Roboto";
 }
 
 .link {
@@ -131,9 +135,9 @@ input {
 }
 
 button, .btn {
-  display: inline-block;
   font-size: 3.6rem;
   margin-top: 0.5em;
+  text-decoration: none;
 }
 
 input[type=text] {

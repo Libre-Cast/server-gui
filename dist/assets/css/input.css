@@ -43,6 +43,8 @@ button, .btn {
   color: #FAFAFA;
   background: #4F9CEF;
   cursor: pointer;
+  display: inline-grid;
+  place-items: center;
   min-width: 25rem;
   margin-right: 2em;
 }
