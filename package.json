@@ -1,5 +1,5 @@
 {
-  "name": "LibreCast Server GUI",
+  "name": "librecast-server-gui",
   "version": "0.0.1",
   "scripts": {
     "build": "tauri build"
