@@ -1,20 +1,20 @@
 @use 'abstracts/colors.scss';
-@use 'abstracts/fonts.scss';
+
 
 input, button, .btn {
     font-size: 2.4rem;
 
     outline: 0 none transparent;
     border: 0 none transparent;
-    border-radius: .2em;
+    border-radius: .4em;
 
-    padding: .2em .5em;
+    padding: .5em .8em;
     box-shadow: 0 4px 16px rgba(colors.$primary, 0.4);
 
-    transition: border-radius .2s, box-shadow .3s;
+    transition: border-radius .5s, box-shadow .3s;
 
     &:hover {
-        border-radius: .4em;
+        border-radius: 4em;
         box-shadow: 0 4px 16px rgba(colors.$primary, 0.55);
     }
 
@@ -25,11 +25,16 @@ input, button, .btn {
 }
 
 input[type="text"] {
+    font-family: 'Text';
     background: colors.$surface;
+
+    &::placeholder {
+        color: alpha(rgba(colors.$primary, 0.55));
+    }
 }
 
 button, .btn {
-    font-family: 'Manrope';
+    font-family: 'Special';
     text-transform: uppercase;
     text-decoration: none transparent;
 
@@ -41,7 +46,7 @@ button, .btn {
     display: inline-grid;
     place-items: center;
     min-width: 25rem;
-    margin-right: 2em;
+    padding: .5em 1.5em;
 }
 
 .btn--secondary {

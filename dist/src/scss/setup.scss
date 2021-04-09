@@ -1,11 +1,12 @@
 @use  'abstracts/colors.scss';
-@use  'abstracts/fonts.scss';
 @use 'input.scss';
+@use 'text.scss';
 
 
 *, :root, html, body {
     margin: 0;
     padding: 0;
+    font-family: 'Roboto';
     font-size: 5pt;
     box-sizing: border-box;
 }
@@ -46,29 +47,36 @@ section {
     place-self: center;
 }
 
-.logo {
-    width: 75%;
-}
+.logos {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
-h1, h2, p {
-    margin-bottom: .5em;
+    * {
+        max-width: 75%;
+        max-height: 50%;
+    }
+
+    .wordmark {
+        max-width: 30%;
+        max-height: 25%;
+        margin-top: 8rem;
+    }
 }
 
 h1 {
     font-size: 9.6rem;
-    font-family: 'Manrope';
-    color: colors.$primary;
 }
 
 h2 {
     font-size: 6rem;
-    font-family: 'Roboto';
-    font-weight: normal;
 }
 
 p {
     font-size: 3rem;
-    font-family: 'Roboto';
 }
 
 .link {
@@ -87,6 +95,7 @@ button, .btn {
     font-size: 3.6rem;
     margin-top: .5em;
     text-decoration: none;
+    margin-right: 2em;
 }
 
 input[type="text"] {

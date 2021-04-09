@@ -1,30 +1,14 @@
-@font-face {
-  font-family: "Roboto";
-  src: url("../../assets/fonts/Roboto/Roboto-Light.ttf");
-}
-@font-face {
-  font-family: "Roboto Regular";
-  src: url("../../assets/fonts/Roboto/Roboto-Regular.ttf");
-}
-@font-face {
-  font-family: "Manrope";
-  src: url("../../assets/fonts/Manrope/static/Manrope-Bold.ttf");
-}
-@font-face {
-  font-family: "Manrope Light";
-  src: url("../../assets/fonts/Manrope/static/Manrope-ExtraLight.ttf");
-}
 input, button, .btn {
   font-size: 2.4rem;
   outline: 0 none transparent;
   border: 0 none transparent;
-  border-radius: 0.2em;
-  padding: 0.2em 0.5em;
+  border-radius: 0.4em;
+  padding: 0.5em 0.8em;
   box-shadow: 0 4px 16px rgba(79, 156, 239, 0.4);
-  transition: border-radius 0.2s, box-shadow 0.3s;
+  transition: border-radius 0.5s, box-shadow 0.3s;
 }
 input:hover, button:hover, .btn:hover {
-  border-radius: 0.4em;
+  border-radius: 4em;
   box-shadow: 0 4px 16px rgba(79, 156, 239, 0.55);
 }
 input:focus, input:active, button:focus, button:active, .btn:focus, .btn:active {
@@ -33,11 +17,15 @@ input:focus, input:active, button:focus, button:active, .btn:focus, .btn:active 
 }
 
 input[type=text] {
+  font-family: "Text";
   background: #FAFAFA;
+}
+input[type=text]::placeholder {
+  color: 0.55;
 }
 
 button, .btn {
-  font-family: "Manrope";
+  font-family: "Special";
   text-transform: uppercase;
   text-decoration: none transparent;
   color: #FAFAFA;
@@ -46,7 +34,7 @@ button, .btn {
   display: inline-grid;
   place-items: center;
   min-width: 25rem;
-  margin-right: 2em;
+  padding: 0.5em 1.5em;
 }
 
 .btn--secondary {
@@ -54,9 +42,60 @@ button, .btn {
   background: #FAFAFA;
 }
 
+@font-face {
+  font-family: "Text";
+  src: url("../../assets/fonts/Roboto/Roboto-Light.ttf");
+}
+@font-face {
+  font-family: "Text Light";
+  src: url("../../assets/fonts/Roboto/Roboto-Thin.ttf");
+}
+@font-face {
+  font-family: "Text Thick";
+  src: url("../../assets/fonts/Roboto/Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: "Special";
+  src: url("../../assets/fonts/Manrope/static/Manrope-Bold.ttf");
+}
+@font-face {
+  font-family: "Special Light";
+  src: url("../../assets/fonts/Manrope/static/Manrope-ExtraLight.ttf");
+}
+* {
+  font-family: "Text";
+  color: #4D4D4D;
+}
+
+header, header span {
+  font-size: 6rem;
+  font-family: "Special Light";
+  color: #4F9CEF;
+}
+
+h1, h2, p {
+  margin-bottom: 0.5em;
+}
+
+h1 {
+  font-size: 3.2rem;
+  font-family: "Special";
+  color: #4F9CEF;
+}
+
+h2 {
+  font-size: 1.6rem;
+  font-family: "Text Light";
+}
+
+p {
+  font-size: 1.2rem;
+}
+
 *, :root, html, body {
   margin: 0;
   padding: 0;
+  font-family: "Roboto";
   font-size: 5pt;
   box-sizing: border-box;
 }
@@ -97,29 +136,34 @@ section {
   place-self: center;
 }
 
-.logo {
-  width: 75%;
+.logos {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-
-h1, h2, p {
-  margin-bottom: 0.5em;
+.logos * {
+  max-width: 75%;
+  max-height: 50%;
+}
+.logos .wordmark {
+  max-width: 30%;
+  max-height: 25%;
+  margin-top: 8rem;
 }
 
 h1 {
   font-size: 9.6rem;
-  font-family: "Manrope";
-  color: #4F9CEF;
 }
 
 h2 {
   font-size: 6rem;
-  font-family: "Roboto";
-  font-weight: normal;
 }
 
 p {
   font-size: 3rem;
-  font-family: "Roboto";
 }
 
 .link {
@@ -138,6 +182,7 @@ button, .btn {
   font-size: 3.6rem;
   margin-top: 0.5em;
   text-decoration: none;
+  margin-right: 2em;
 }
 
 input[type=text] {

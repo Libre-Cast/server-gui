@@ -18,5 +18,34 @@
   font-family: "Special Light";
   src: url("../../assets/fonts/Manrope/static/Manrope-ExtraLight.ttf");
 }
+* {
+  font-family: "Text";
+  color: #4D4D4D;
+}
 
-/*# sourceMappingURL=fonts.css.map */
+header, header span {
+  font-size: 6rem;
+  font-family: "Special Light";
+  color: #4F9CEF;
+}
+
+h1, h2, p {
+  margin-bottom: 0.5em;
+}
+
+h1 {
+  font-size: 3.2rem;
+  font-family: "Special";
+  color: #4F9CEF;
+}
+
+h2 {
+  font-size: 1.6rem;
+  font-family: "Text Light";
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+/*# sourceMappingURL=text.css.map */

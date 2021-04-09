@@ -1,17 +1,21 @@
 @font-face {
-  font-family: "Roboto";
+  font-family: "Text";
   src: url("../../assets/fonts/Roboto/Roboto-Light.ttf");
 }
 @font-face {
-  font-family: "Roboto Regular";
+  font-family: "Text Light";
+  src: url("../../assets/fonts/Roboto/Roboto-Thin.ttf");
+}
+@font-face {
+  font-family: "Text Thick";
   src: url("../../assets/fonts/Roboto/Roboto-Regular.ttf");
 }
 @font-face {
-  font-family: "Manrope";
+  font-family: "Special";
   src: url("../../assets/fonts/Manrope/static/Manrope-Bold.ttf");
 }
 @font-face {
-  font-family: "Manrope Light";
+  font-family: "Special Light";
   src: url("../../assets/fonts/Manrope/static/Manrope-ExtraLight.ttf");
 }
 :root, html, body {

@@ -1,18 +1,167 @@
 @font-face {
-  font-family: "Roboto";
+  font-family: "Text";
   src: url("../../assets/fonts/Roboto/Roboto-Light.ttf");
 }
 @font-face {
-  font-family: "Roboto Regular";
+  font-family: "Text Light";
+  src: url("../../assets/fonts/Roboto/Roboto-Thin.ttf");
+}
+@font-face {
+  font-family: "Text Thick";
   src: url("../../assets/fonts/Roboto/Roboto-Regular.ttf");
 }
 @font-face {
-  font-family: "Manrope";
+  font-family: "Special";
   src: url("../../assets/fonts/Manrope/static/Manrope-Bold.ttf");
 }
 @font-face {
-  font-family: "Manrope Light";
+  font-family: "Special Light";
   src: url("../../assets/fonts/Manrope/static/Manrope-ExtraLight.ttf");
+}
+* {
+  font-family: "Text";
+  color: #4D4D4D;
+}
+
+header, header span {
+  font-size: 6rem;
+  font-family: "Special Light";
+  color: #4F9CEF;
+}
+
+h1, h2, p {
+  margin-bottom: 0.5em;
+}
+
+h1 {
+  font-size: 3.2rem;
+  font-family: "Special";
+  color: #4F9CEF;
+}
+
+h2 {
+  font-size: 1.6rem;
+  font-family: "Text Light";
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+input, button, .btn {
+  font-size: 2.4rem;
+  outline: 0 none transparent;
+  border: 0 none transparent;
+  border-radius: 0.4em;
+  padding: 0.5em 0.8em;
+  box-shadow: 0 4px 16px rgba(79, 156, 239, 0.4);
+  transition: border-radius 0.5s, box-shadow 0.3s;
+}
+input:hover, button:hover, .btn:hover {
+  border-radius: 4em;
+  box-shadow: 0 4px 16px rgba(79, 156, 239, 0.55);
+}
+input:focus, input:active, button:focus, button:active, .btn:focus, .btn:active {
+  border-radius: 0.5em;
+  box-shadow: 0 4px 16px rgba(79, 156, 239, 0.55);
+}
+
+input[type=text] {
+  font-family: "Text";
+  background: #FAFAFA;
+}
+input[type=text]::placeholder {
+  color: 0.55;
+}
+
+button, .btn {
+  font-family: "Special";
+  text-transform: uppercase;
+  text-decoration: none transparent;
+  color: #FAFAFA;
+  background: #4F9CEF;
+  cursor: pointer;
+  display: inline-grid;
+  place-items: center;
+  min-width: 25rem;
+  padding: 0.5em 1.5em;
+}
+
+.btn--secondary {
+  color: #4F9CEF;
+  background: #FAFAFA;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 9pt;
+  box-sizing: border-box;
+}
+
+h1 {
+  text-transform: uppercase;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-family: "Special";
+  color: #4F9CEF;
+}
+
+.btn, button {
+  font-size: 1.6rem;
+}
+
+body {
+  display: grid;
+  grid-template-rows: fit-content fit-content 1fr fit-content;
+  grid-template-areas: "nav" "header" "main" "foot";
+}
+
+nav {
+  grid-area: nav;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 16px rgba(79, 156, 239, 0.4);
+}
+
+.version * {
+  font-size: 1.2rem;
+  margin-right: 1rem;
+}
+
+header {
+  grid-area: header;
+  margin: 1.2em;
+  text-align: center;
+}
+
+main {
+  grid-area: main;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+section {
+  width: 20vw;
+  box-shadow: 0 4px 16px rgba(79, 156, 239, 0.4);
+  padding: 2rem 3rem;
+  border-radius: 2rem;
+}
+
+#media {
+  width: 25vw;
+}
+
+footer {
+  grid-area: foot;
+}
+
+.logo {
+  height: 5rem;
+  margin: 1rem;
 }
 
 /*# sourceMappingURL=dashboard.css.map */

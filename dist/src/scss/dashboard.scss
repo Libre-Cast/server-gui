@@ -1,2 +1,80 @@
 @use './abstracts/colors.scss';
 @use './abstracts/fonts.scss';
+@use 'text.scss';
+@use 'input.scss';
+
+
+* {
+    margin: 0;
+    padding: 0;
+
+    font-size: 9pt;
+
+    box-sizing: border-box;
+}
+
+h1 {
+    text-transform: uppercase;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-family: 'Special';
+    color: colors.$primary;
+}
+
+.btn, button {
+    font-size: 1.6rem;
+}
+
+body {
+    display: grid;
+    grid-template-rows: fit-content fit-content 1fr fit-content;
+    grid-template-areas: 'nav' 'header' 'main' 'foot';
+}
+
+nav {
+    grid-area: nav;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 16px rgba(colors.$primary, 0.4);
+}
+
+.version * {
+    font-size: 1.2rem;
+    margin-right: 1rem;
+}
+
+header {
+    grid-area: header;
+    margin: 1.2em;
+    text-align: center;
+}
+
+main {
+    grid-area: main;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+section {
+    width: 20vw;
+    box-shadow: 0 4px 16px rgba(colors.$primary, 0.4);
+
+    padding: 2rem 3rem;
+    border-radius: 2rem;
+}
+
+#media {
+    width: 25vw;
+}
+
+footer {
+    grid-area: foot;
+}
+
+.logo {
+    height: 5rem;
+    margin: 1rem;
+}

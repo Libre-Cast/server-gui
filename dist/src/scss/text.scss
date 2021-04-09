@@ -1,0 +1,33 @@
+@use  'abstracts/fonts.scss';
+@use  'abstracts/colors.scss';
+
+
+* {
+    font-family: 'Text';
+    color: colors.$text;
+}
+
+header, header span {
+    font-size: 6rem;
+    font-family: 'Special Light';
+    color: colors.$primary;
+}
+
+h1, h2, p {
+    margin-bottom: .5em;
+}
+
+h1 {
+    font-size: 3.2rem;
+    font-family: 'Special';
+    color: colors.$primary;
+}
+
+h2 {
+    font-size: 1.6rem;
+    font-family: 'Text Light';
+}
+
+p {
+    font-size: 1.2rem;
+}
