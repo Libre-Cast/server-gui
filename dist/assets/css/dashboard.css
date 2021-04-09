@@ -24,7 +24,7 @@
 }
 
 header, header span {
-  font-size: 6rem;
+  font-size: 5rem;
   font-family: "Special Light";
   color: #4F9CEF;
 }
@@ -101,6 +101,7 @@ button, .btn {
 
 h1 {
   text-transform: uppercase;
+  text-align: center;
 }
 
 h2 {
@@ -117,14 +118,21 @@ body {
   display: grid;
   grid-template-rows: fit-content fit-content 1fr fit-content;
   grid-template-areas: "nav" "header" "main" "foot";
+  height: 100vh;
 }
 
 nav {
   grid-area: nav;
+  height: fit-content;
   display: flex;
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 4px 16px rgba(79, 156, 239, 0.4);
+}
+
+.logo {
+  height: 5rem;
+  margin: 1rem;
 }
 
 .version * {
@@ -134,7 +142,7 @@ nav {
 
 header {
   grid-area: header;
-  margin: 1.2em;
+  height: fit-content;
   text-align: center;
 }
 
@@ -142,10 +150,12 @@ main {
   grid-area: main;
   display: flex;
   justify-content: space-evenly;
+  height: 1fr;
 }
 
 section {
   width: 20vw;
+  min-height: 80%;
   box-shadow: 0 4px 16px rgba(79, 156, 239, 0.4);
   padding: 2rem 3rem;
   border-radius: 2rem;
@@ -157,11 +167,6 @@ section {
 
 footer {
   grid-area: foot;
-}
-
-.logo {
-  height: 5rem;
-  margin: 1rem;
 }
 
 /*# sourceMappingURL=dashboard.css.map */
