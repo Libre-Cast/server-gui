@@ -1,5 +1,13 @@
+:root {
+    --surface: #FAFAFA;
+    --text: #4D4D4D;
+
+    --shadow: #4F9CEF35;
+}
+
 $primary: #4F9CEF;
 $destructive: #EC4667;
 
-$surface: #FAFAFA;
-$text: #4D4D4D;
+$surface: var(--surface);
+$text: var(--text);
+$shadow: var(--shadow);

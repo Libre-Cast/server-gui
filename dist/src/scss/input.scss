@@ -9,18 +9,18 @@ input, button, .btn {
     border-radius: .4em;
 
     padding: .5em .8em;
-    box-shadow: 0 4px 16px rgba(colors.$primary, 0.4);
+    box-shadow: 0 4px 16px colors.$shadow;
 
     transition: border-radius .5s, box-shadow .3s;
 
     &:hover {
         border-radius: 4em;
-        box-shadow: 0 4px 16px rgba(colors.$primary, 0.55);
+        box-shadow: 0 4px 16px colors.$shadow;
     }
 
     &:focus, &:active {
         border-radius: .5em;
-        box-shadow: 0 4px 16px rgba(colors.$primary, 0.55);
+        box-shadow: 0 4px 16px colors.$shadow;
     }
 }
 
@@ -30,6 +30,37 @@ input[type="text"] {
 
     &::placeholder {
         color: alpha(rgba(colors.$primary, 0.55));
+    }
+}
+
+.switch {
+    background-color: rgba(colors.$primary, 0.4);
+    width: 3.6rem; height: 1.4rem;
+
+    border-radius: .7rem;
+    cursor: pointer;
+
+    .slider {
+        display: block;
+        background-color: desaturate(adjust-hue(colors.$primary, 10), 40);
+        width: 2rem; height: 2rem;
+
+        margin-top: -.3rem;
+
+        border-radius: 100%;
+        box-shadow: 0 4px 16px colors.$shadow;
+
+        transition: .5s margin-left, .3s background-color;
+    }
+
+    input[type="checkbox"] {
+        display: none;
+        width: 0; height: 0;
+    }
+
+    input[type="checkbox"]:checked + .slider {
+        background-color: colors.$primary;
+        margin-left: 1.6rem;
     }
 }
 

@@ -2,6 +2,7 @@
 @use './abstracts/fonts.scss';
 @use 'text.scss';
 @use 'input.scss';
+@use 'setting.scss';
 
 
 * {
@@ -11,6 +12,8 @@
     font-size: 9pt;
 
     box-sizing: border-box;
+
+    background-color: colors.$surface;
 }
 
 h1 {
@@ -25,7 +28,9 @@ h2 {
 }
 
 .btn, button {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
+    width: fit-content;
+    min-width: 1px;
 }
 
 body {
@@ -43,7 +48,7 @@ nav {
     justify-content: space-between;
     align-items: center;
 
-    box-shadow: 0 4px 16px rgba(colors.$primary, 0.4);
+    box-shadow: 0 4px 16px colors.$shadow;
 }
 
 .logo {
@@ -54,6 +59,7 @@ nav {
 .version * {
     font-size: 1.2rem;
     margin-right: 1rem;
+    text-align: right;
 }
 
 header {
@@ -66,20 +72,111 @@ main {
     grid-area: main;
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
     height: 1fr;
 }
 
 section {
     width: 20vw;
-    min-height: 80%;
-    box-shadow: 0 4px 16px rgba(colors.$primary, 0.4);
+    min-height: 90%;
+    box-shadow: 0 4px 16px colors.$shadow;
 
     padding: 2rem 3rem;
     border-radius: 2rem;
+
+    display: grid;
+    grid-template-areas: 'header' 'main' 'footer';
+    grid-template-rows: auto 1fr auto;
+}
+
+.section-header {
+    grid-area: header;
+}
+
+.section-main {
+    grid-area: main;
+}
+
+.section-footer {
+    grid-area: footer;
+    margin: 0 auto;
 }
 
 #media {
     width: 25vw;
+}
+
+.media-controls {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.small-media-buttons {
+    margin: 2rem 0;
+}
+
+.btn--round, .btn--round:active, .btn--round:focus {
+    all: none;
+
+    width: 18rem;
+    height: 18rem;
+    padding: 4rem;
+
+    border-radius: 9rem;
+
+    &:hover {
+        border-radius: 7rem;
+    }
+
+    &:hover {
+        border-radius: 7rem;
+    }
+}
+
+.btn--round-small, .btn--round-small:active, .btn--round-small:focus {
+    width: 6rem;
+    height: 6rem;
+
+    margin: 0 .5rem;
+    padding: 1.75rem;
+
+    border-radius: 3rem;
+
+    &:hover {
+        border-radius: 2rem;
+    }
+}
+
+#currently-casted-media, #server-ip {
+    font-size: 1.8rem;
+}
+
+.media-info, #server-ip {
+    text-align: center;
+}
+
+#connect {
+    grid-template-areas: 'qr' 'header' 'ip';
+    grid-template-rows: 1fr auto auto;
+
+    flex-shrink: 1;
+    min-height: 10%;
+    width: 16vw;
+
+    .connect-qr-code {
+        grid-area: qr;
+        height: fit-content;
+    }
+
+    .section-header {
+        grid-area: header;
+    }
+
+    #server-ip {
+        grid-area: ip;
+    }
 }
 
 footer {

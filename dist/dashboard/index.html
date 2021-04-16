@@ -11,11 +11,11 @@
     <nav>
         <img src="../assets/svgs/logo.svg" alt="" class="logo">
         <div class="version">
-            <p id="server-version">
-                0.0.1-a1 (Plc.Hldr.)
+            <p>
+                Server: <span id="server-version"> 0.0.1-a1 (Plc.Hldr.)</span>
             </p>
-            <p id="gui-version">
-                0.0.1-o1 (Plc.Hldr.)
+            <p>
+                GUI: <span id="gui-version"> 0.0.1-a1 (Plc.Hldr.)</span>
             </p>
         </div>
     </nav>
@@ -26,11 +26,11 @@
 
     <main>
         <section class="devices">
-            <h1>
+            <h1 class="section-header">
                 Devices
             </h1>
 
-            <div class="device-list">
+            <div class="device-list section-main">
                 <div class="device">
                     <div class="device-icon"></div>
 
@@ -44,15 +44,15 @@
                 </div>
             </div>
 
-            <a href="./devices.html" class="btn btn--secondary">Manage Device</a>
+            <a href="./devices.html" class="btn btn--secondary section-footer">Manage Device</a>
         </section>
 
         <section id="settings">
-            <h1>
+            <h1 class="section-header">
                 Settings
             </h1>
 
-            <div class="settings-list">
+            <div class="settings-list section-main">
                 <div class="setting">
                     <h2 class="setting-name">
                         Dark Theme
@@ -62,7 +62,10 @@
                         This will give the server UI a darker background.
                     </p>
 
-                    <input type="checkbox" name="dark-theme" id="dark-theme" class="switch">
+                    <label class="switch">
+                        <input type="checkbox" name="dark-theme" id="dark-theme">
+                        <span class="slider"></span>
+                    </label>
                 </div>
 
                 <div class="setting">
@@ -74,7 +77,10 @@
                         Turning this off means that devices can't cast to this server.
                     </p>
 
-                    <input type="checkbox" name="dark-theme" id="dark-theme" class="switch">
+                    <label class="switch">
+                        <input type="checkbox" name="allow-connections" id="allow-connections">
+                        <span class="slider"></span>
+                    </label>
                 </div>
 
                 <div class="setting">
@@ -86,29 +92,44 @@
                         Sends notifications on the server about device connections, casting, and so on.
                     </p>
 
-                    <input type="checkbox" name="dark-theme" id="dark-theme" class="switch">
+                    <label class="switch">
+                        <input type="checkbox" name="notifications" id="notifications">
+                        <span class="slider"></span>
+                    </label>
                 </div>
             </div>
 
-            <a href="./settings.html" class="btn btn--secondary">All Settings</a>
+            <a href="./settings.html" class="btn btn--secondary section-footer">All Settings</a>
         </section>
 
         <section id="media">
-            <h1>
+            <h1 class="section-header">
                 Media
             </h1>
-            <div class="media-controls">
-                <button class="btn btn--round" id="pause-button">Pause</button>
-                <button class="btn btn--round-small" id="prev-button">Prev</button>
-                <button class="btn btn--round-small" id="stop-button">Stop</button>
-                <button class="btn btn--round-small" id="next-button">Next</button>
+            <div class="media-controls section-main">
+                <button class="btn--secondary btn--round" id="pause-button">
+                    <img src="../assets/svgs/pause.svg" alt="pause">
+                </button>
+                <div class="small-media-buttons">
+                    <button class="btn--secondary btn--round btn--round-small" id="prev-button">
+                        <img src="../assets/svgs/prev.svg" alt="prev">
+                    </button>
+                    <button class="btn--secondary btn--round btn--round-small" id="stop-button">
+                        <img src="../assets/svgs/stop.svg" alt="stop">
+                    </button>
+                    <button class="btn--secondary btn--round btn--round-small" id="next-button">
+                        <img src="../assets/svgs/next.svg" alt="next">
+                    </button>
+                </div>
             </div>
-            <h2>
-                Currently Casting
-            </h2>
-            <p id="currently-casted-media">
-                Song - Artist (Plc.Hldr.)
-            </p>
+            <div class="section-footer media-info">
+                <h2>
+                    Currently Casting
+                </h2>
+                <p id="currently-casted-media">
+                    Song - Artist (Plc.Hldr.)
+                </p>
+            </div>
         </section>
 
         <section id="connect">
@@ -118,12 +139,12 @@
                 </p>
             </div>
 
-            <h1>
+            <h1 class="section-header">
                 Connect
             </h1>
 
-            <p>
-                <span id="server-ip">192.168.1.167</span>
+            <p id="server-ip">
+               192.168.1.167:13831
             </p>
         </section>
     </main>

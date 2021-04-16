@@ -1,0 +1,20 @@
+.setting {
+    display: grid;
+
+    grid-template-areas: 'name swicth' 'desc desc';
+    grid-template-columns: 1fr auto;
+    place-items: center start;
+}
+
+.setting-name {
+    grid-area: name;
+}
+
+.setting > .switch {
+    margin-top: -.55rem;
+    grid-area: swicth;
+}
+
+.setting-description {
+    grid-area: desc;
+}
