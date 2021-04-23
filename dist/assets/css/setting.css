@@ -1,1 +1,44 @@
-.setting{display:grid;grid-template-areas:"name swicth" "desc desc";grid-template-columns:1fr auto;place-items:center start}.setting-name{grid-area:name}.setting>.switch{margin-top:-0.55rem;grid-area:swicth}.setting-description{grid-area:desc}
+:root {
+  --surface: #FAFAFA;
+  --text: #4D4D4D;
+  --shadow: #4F9CEF35;
+}
+
+.setting {
+  display: grid;
+  margin: 1.5rem 0;
+  grid-template-areas: "name switch" "desc desc";
+  grid-template-columns: 1fr auto;
+  place-items: center start;
+}
+
+.setting-textbox {
+  grid-template-areas: "name" "textbox" "desc";
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto;
+}
+
+.setting-name {
+  grid-area: name;
+}
+
+.setting > .switch {
+  margin-top: -0.55rem;
+  grid-area: switch;
+}
+
+.setting-textbox > input {
+  margin-top: -0.55rem;
+  grid-area: textbox;
+  width: 100%;
+  margin: 0.5rem 0 1rem 0;
+  font-size: 1.8rem;
+}
+
+.setting-description {
+  grid-area: desc;
+}
+
+.warning {
+  color: #EC4667;
+}

@@ -14,6 +14,7 @@
     box-sizing: border-box;
 
     background-color: colors.$surface;
+    transition: background-color .5s, color .5s, box-shadow .3s;
 }
 
 h1 {
@@ -38,6 +39,7 @@ body {
     grid-template-rows: fit-content fit-content 1fr fit-content;
     grid-template-areas: 'nav' 'header' 'main' 'foot';
     height: 100vh;
+    overflow-x: hidden;
 }
 
 nav {
@@ -69,11 +71,37 @@ header {
 }
 
 main {
+    display: grid;
+    grid-template-areas: 'devices main settings';
+    grid-template-columns: 100vw 100vw 100vw;
+
     grid-area: main;
+    height: 1fr;
+    width: 100vw;
+
+    margin-left: -100vw;
+
+    transition: margin-left .5s;
+}
+
+#main-container {
+    grid-area: main;
+}
+
+#devices-container {
+    grid-area: devices;
+}
+
+#settings-container {
+    grid-area: settings;
+}
+
+.container {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     height: 1fr;
+    width: 100vw;
 }
 
 section {
@@ -164,6 +192,7 @@ section {
     flex-shrink: 1;
     min-height: 10%;
     width: 16vw;
+    padding: 3rem;
 
     .connect-qr-code {
         grid-area: qr;
@@ -179,7 +208,28 @@ section {
     }
 }
 
-footer {
-    grid-area: foot;
+#long-device-list {
+    width: 30vw;
 }
 
+#activity-log {
+    width: 40vw;
+}
+
+#feature-settings {
+    width: 45vw;
+}
+
+footer {
+    grid-area: foot;
+    display: grid;
+    place-items: center;
+
+    overflow-y: hidden;
+}
+
+#back-button {
+    position: relative;
+    top: 10vh;
+    transition: top .3s;
+}

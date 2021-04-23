@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../assets/css/dashboard.css">
     <title>Dashboard</title>
+
+    <script src="./scripts/main.js" type="module" defer></script>
 </head>
 <body>
     <nav>
@@ -21,132 +23,331 @@
     </nav>
 
     <header>
-        <span id="server-name">LibreCast Dev (Plc.Hldr.)</span>
+        LibreCast Dev (Plc.Hldr.)
     </header>
 
     <main>
-        <section class="devices">
-            <h1 class="section-header">
-                Devices
-            </h1>
-
-            <div class="device-list section-main">
-                <div class="device">
-                    <div class="device-icon"></div>
-
-                    <p class="device-name">
-                        John Doe's iPhone
-                    </p>
-
-                    <p class="device-ip">
-                        192.168.1.100
-                    </p>
+        <div class="container" id="main-container">
+            <section id="device-list">
+                <h1 class="section-header">
+                    Devices
+                </h1>
+    
+                <div class="device-list section-main">
+                    <div class="device">
+                        <div class="device-icon"></div>
+    
+                        <p class="device-name">
+                            John Doe's iPhone
+                        </p>
+    
+                        <p class="device-ip">
+                            192.168.1.100
+                        </p>
+                    </div>
                 </div>
-            </div>
-
-            <a href="./devices.html" class="btn btn--secondary section-footer">Manage Device</a>
-        </section>
-
-        <section id="settings">
-            <h1 class="section-header">
-                Settings
-            </h1>
-
-            <div class="settings-list section-main">
-                <div class="setting">
-                    <h2 class="setting-name">
-                        Dark Theme
-                    </h2>
-
-                    <p class="setting-description">
-                        This will give the server UI a darker background.
-                    </p>
-
-                    <label class="switch">
-                        <input type="checkbox" name="dark-theme" id="dark-theme">
-                        <span class="slider"></span>
-                    </label>
+    
+                <button class="btn btn--secondary section-footer" id="manage-devices-button">Manage Device</button>
+            </section>
+    
+            <section id="settings">
+                <h1 class="section-header">
+                    Settings
+                </h1>
+    
+                <div class="settings-list section-main">
+                    <div class="setting">
+                        <h2 class="setting-name">
+                            Dark Theme
+                        </h2>
+    
+                        <p class="setting-description">
+                            This will give the server UI a darker background.
+                        </p>
+    
+                        <label class="switch">
+                            <input type="checkbox" name="dark-theme" id="dark-theme">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+    
+                    <div class="setting">
+                        <h2 class="setting-name">
+                            Allow Connections
+                        </h2>
+    
+                        <p class="setting-description">
+                            Turning this off means that devices can't cast to this server.
+                        </p>
+    
+                        <label class="switch">
+                            <input type="checkbox" name="allow-connections" id="allow-connections">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+    
+                    <div class="setting">
+                        <h2 class="setting-name">
+                            Notifications
+                        </h2>
+    
+                        <p class="setting-description">
+                            Sends notifications on the server about device connections, casting, and so on.
+                        </p>
+    
+                        <label class="switch">
+                            <input type="checkbox" name="notifications" id="notifications">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
                 </div>
-
-                <div class="setting">
-                    <h2 class="setting-name">
-                        Allow Connections
-                    </h2>
-
-                    <p class="setting-description">
-                        Turning this off means that devices can't cast to this server.
-                    </p>
-
-                    <label class="switch">
-                        <input type="checkbox" name="allow-connections" id="allow-connections">
-                        <span class="slider"></span>
-                    </label>
-                </div>
-
-                <div class="setting">
-                    <h2 class="setting-name">
-                        Notifications
-                    </h2>
-
-                    <p class="setting-description">
-                        Sends notifications on the server about device connections, casting, and so on.
-                    </p>
-
-                    <label class="switch">
-                        <input type="checkbox" name="notifications" id="notifications">
-                        <span class="slider"></span>
-                    </label>
-                </div>
-            </div>
-
-            <a href="./settings.html" class="btn btn--secondary section-footer">All Settings</a>
-        </section>
-
-        <section id="media">
-            <h1 class="section-header">
-                Media
-            </h1>
-            <div class="media-controls section-main">
-                <button class="btn--secondary btn--round" id="pause-button">
-                    <img src="../assets/svgs/pause.svg" alt="pause">
-                </button>
-                <div class="small-media-buttons">
-                    <button class="btn--secondary btn--round btn--round-small" id="prev-button">
-                        <img src="../assets/svgs/prev.svg" alt="prev">
+    
+                <button class="btn btn--secondary section-footer" id="all-settings-button">All Settings</button>
+            </section>
+    
+            <section id="media">
+                <h1 class="section-header">
+                    Media
+                </h1>
+                <div class="media-controls section-main">
+                    <button class="btn--secondary btn--round" id="pause-button">
+                        <img src="../assets/svgs/pause.svg" alt="pause">
                     </button>
-                    <button class="btn--secondary btn--round btn--round-small" id="stop-button">
-                        <img src="../assets/svgs/stop.svg" alt="stop">
-                    </button>
-                    <button class="btn--secondary btn--round btn--round-small" id="next-button">
-                        <img src="../assets/svgs/next.svg" alt="next">
-                    </button>
+                    <div class="small-media-buttons">
+                        <button class="btn--secondary btn--round btn--round-small" id="prev-button">
+                            <img src="../assets/svgs/prev.svg" alt="prev">
+                        </button>
+                        <button class="btn--secondary btn--round btn--round-small" id="stop-button">
+                            <img src="../assets/svgs/stop.svg" alt="stop">
+                        </button>
+                        <button class="btn--secondary btn--round btn--round-small" id="next-button">
+                            <img src="../assets/svgs/next.svg" alt="next">
+                        </button>
+                    </div>
                 </div>
-            </div>
-            <div class="section-footer media-info">
-                <h2>
-                    Currently Casting
-                </h2>
-                <p id="currently-casted-media">
-                    Song - Artist (Plc.Hldr.)
+                <div class="section-footer media-info">
+                    <h2>
+                        Currently Casting
+                    </h2>
+                    <p id="currently-casted-media">
+                        Song - Artist (Plc.Hldr.)
+                    </p>
+                </div>
+            </section>
+
+            <section id="connect">
+                <div class="connect-qr-code">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 21" shape-rendering="crispEdges">
+                        <path stroke="#4F9CEF" d="M0 0.5h7m7 0h7M0 1.5h1m5 0h1m1 0h1m1 0h2m2 0h
+                            1m5 0h1M0 2.5h1m1 0h3m1 0h1m3 0h1m3 0h1m1 0h3m1 0h1M0 3.5h1m1 0h3m1 0h1m2 0h1m1
+                            0h1m2 0h1m1 0h3m1 0h1M0 4.5h1m1 0h3m1 0h1m1 0h1m3 0h1m1 0h1m1 0h3m1 0h1M0 5.5h1m
+                            5 0h1m2 0h3m2 0h1m5 0h1M0 6.5h7m1 0h1m1 0h1m1 0h1m1 0h7M10 7.5h2M0 8.5h1m1 0h1m1
+                            0h1m1 0h1m2 0h2m1 0h1m3 0h1m2 0h1M0 9.5h3m1 0h1m3 0h2m1 0h1m2 0h3m1 0h1M1 10.5h
+                            4m1 0h4m1 0h2m1 0h2m3 0h1M3 11.5h1m1 0h1m1 0h5m2 0h1m1 0h1m1 0h3M2 12.5h2m1 0h5m
+                            2 0h1m1 0h1m1 0h1m1 0h1m1 0h1M8 13.5h1m1 0h1m1 0h1m2 0h2m2 0h1M0 14.5h7m3 0h2m2
+                            0h2M0 15.5h1m5 0h1m3 0h2m1 0h1m1 0h1m1 0h1M0 16.5h1m1 0h3m1 0h1m1 0h3m2 0h1m3 0h
+                            1M0 17.5h1m1 0h3m1 0h1m3 0h2m5 0h3M0 18.5h1m1 0h3m1 0h1m1 0h1m1 0h1m3 0h1m1 0h1m
+                            3 0h1M0 19.5h1m5 0h1m2 0h1m1 0h3m2 0h5M0 20.5h7m1 0h1m4 0h2m2 0h1m2 0h1"
+                        />
+                    </svg>
+                </div>
+    
+                <h1 class="section-header">
+                    Connect
+                </h1>
+    
+                <p id="server-ip">
+                   192.168.1.167:18381
                 </p>
-            </div>
-        </section>
+            </section>
+        </div>
 
-        <section id="connect">
-            <div class="connect-qr-code">
-                <p>
-                    QR-Code. (Plc.Hldr.)
+        <div class="container" id="devices-container">
+            <section id="long-device-list">
+                <h1 class="section-header">
+                    Devices
+                </h1>
+    
+                <div class="device-list section-main">
+                    <div class="device">
+                        <div class="device-icon"></div>
+    
+                        <p class="device-name">
+                            John Doe's iPhone
+                        </p>
+    
+                        <p class="device-ip">
+                            192.168.1.100
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="activity-log">
+                <h1 class="section-header">
+                    Activity Log
+                </h1>
+            </section>
+
+                
+            <section id="connect">
+                <div class="connect-qr-code">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 21" shape-rendering="crispEdges">
+                        <path stroke="#4F9CEF" d="M0 0.5h7m7 0h7M0 1.5h1m5 0h1m1 0h1m1 0h2m2 0h
+                            1m5 0h1M0 2.5h1m1 0h3m1 0h1m3 0h1m3 0h1m1 0h3m1 0h1M0 3.5h1m1 0h3m1 0h1m2 0h1m1
+                            0h1m2 0h1m1 0h3m1 0h1M0 4.5h1m1 0h3m1 0h1m1 0h1m3 0h1m1 0h1m1 0h3m1 0h1M0 5.5h1m
+                            5 0h1m2 0h3m2 0h1m5 0h1M0 6.5h7m1 0h1m1 0h1m1 0h1m1 0h7M10 7.5h2M0 8.5h1m1 0h1m1
+                            0h1m1 0h1m2 0h2m1 0h1m3 0h1m2 0h1M0 9.5h3m1 0h1m3 0h2m1 0h1m2 0h3m1 0h1M1 10.5h
+                            4m1 0h4m1 0h2m1 0h2m3 0h1M3 11.5h1m1 0h1m1 0h5m2 0h1m1 0h1m1 0h3M2 12.5h2m1 0h5m
+                            2 0h1m1 0h1m1 0h1m1 0h1m1 0h1M8 13.5h1m1 0h1m1 0h1m2 0h2m2 0h1M0 14.5h7m3 0h2m2
+                            0h2M0 15.5h1m5 0h1m3 0h2m1 0h1m1 0h1m1 0h1M0 16.5h1m1 0h3m1 0h1m1 0h3m2 0h1m3 0h
+                            1M0 17.5h1m1 0h3m1 0h1m3 0h2m5 0h3M0 18.5h1m1 0h3m1 0h1m1 0h1m1 0h1m3 0h1m1 0h1m
+                            3 0h1M0 19.5h1m5 0h1m2 0h1m1 0h3m2 0h5M0 20.5h7m1 0h1m4 0h2m2 0h1m2 0h1"
+                        />
+                    </svg>
+                </div>
+    
+                <h1 class="section-header">
+                    Connect
+                </h1>
+    
+                <p id="server-ip">
+                   192.168.1.167:18381
                 </p>
-            </div>
+            </section>
+        </div>
 
-            <h1 class="section-header">
-                Connect
-            </h1>
+        <div class="container" id="settings-container">
+            <section id="general-settings">
+                <h1 class="section-header">
+                    General
+                </h1>
 
-            <p id="server-ip">
-               192.168.1.167:13831
-            </p>
-        </section>
+                <div class="settings-list section-main">
+                    <div class="setting">
+                        <h2 class="setting-name">
+                            Dark Theme
+                        </h2>
+    
+                        <p class="setting-description">
+                            This will give the server UI a darker background.
+                        </p>
+    
+                        <label class="switch">
+                            <input type="checkbox" name="dark-theme" id="dark-theme">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+
+                    <div class="setting">
+                        <h2 class="setting-name">
+                            Check for Updates
+                        </h2>
+    
+                        <p class="setting-description">
+                            Turning this on will automatically check for updates when each
+                            time you start the server.
+                        </p>
+    
+                        <label class="switch">
+                            <input type="checkbox" name="notifications" id="notifications">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+
+                    <div class="setting">
+                        <h2 class="setting-name">
+                            Developer Mode
+                        </h2>
+    
+                        <p class="setting-description">
+                            This will turn on features that are useful for developers. It enables
+                            debug messages and the ability to install local features (plugins)
+                            and server updates. It is recommended to keep this setting off.
+                        </p>
+    
+                        <label class="switch">
+                            <input type="checkbox" name="dark-theme" id="dark-theme">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+
+                    <div class="setting">
+                        <h2 class="setting-name">
+                            Notifications
+                        </h2>
+    
+                        <p class="setting-description">
+                            Sends notifications on the server about device connections, casting, and so on.
+                        </p>
+    
+                        <label class="switch">
+                            <input type="checkbox" name="notifications" id="notifications">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+            </section>
+
+            <section id="server-settings">
+                <h1 class="section-header">
+                    Server
+                </h1>
+
+                <div class="settings-list section-main">
+                    <div class="setting setting-textbox">
+                        <h2 class="setting-name">
+                            Server Name
+                        </h2>
+    
+                        <p class="setting-description">
+                            This will change the display name of your server.
+                        </p>
+    
+                        <input type="text" name="server-name" id="server-name" value="Librecast Server Plc.Hldr.">
+                    </div>
+
+                    <div class="setting setting-textbox">
+                        <h2 class="setting-name">
+                            Server Port
+                        </h2>
+    
+                        <p class="setting-description warning">
+                            Warning! Changing this means that you will have to reconnect 
+                            all your devices. Only change this if you know what you're doing.
+                        </p>
+    
+                        <input type="text" name="server-port" id="server-port" value="18381">
+                    </div>
+
+                    <div class="setting">
+                        <h2 class="setting-name">
+                            Allow Connections
+                        </h2>
+    
+                        <p class="setting-description">
+                            Turning this off means that devices can't cast to this server.
+                        </p>
+    
+                        <label class="switch">
+                            <input type="checkbox" name="allow-connections" id="allow-connections">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+
+            </section>
+
+            <section id="feature-settings">
+                <h1 class="section-header">
+                    Features
+                </h1>
+            </section>
+        </div>
     </main>
+
+    <footer>
+        <button id="back-button" class="btn btn--secondary">Back</button>
+    </footer>
 </body>
 </html>
